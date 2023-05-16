@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bitcoin Price Prediction</title>
+</head>
+<body>
+    <h1>cryptocurrency Price Prediction</h1>
+    <h2>Current Price: ${{ current_price }}</h2>
+    <h2>Upper Band: ${{ upper_band }}</h2>
+    <h2>Lower Band: ${{ lower_band }}</h2>
+    <h2>SMA: ${{ sma }}</h2>
+    <h2>Recommendation: {{ recommendation }}</h2>
+    
+    <div>
+        <h3>Price Chart</h3>
+        {{ plot|safe }}
+    </div>
+    
+</body>
+</html>

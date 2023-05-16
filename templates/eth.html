@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> ETH Price Prediction</title>
+	<style>
+		body {
+			background-color: #f2f2f2;
+			color: #333;
+			font-family: Arial, sans-serif;
+			margin: 0;
+			padding: 0;
+		}
+
+		h1 {
+			font-size: 36px;
+			font-weight: bold;
+			margin-top: 30px;
+			margin-bottom: 20px;
+			text-align: center;
+			text-transform: uppercase;
+		}
+
+		p {
+			font-size: 18px;
+			line-height: 1.5;
+			margin: 10px 0;
+			text-align: center;
+		}
+
+		.current-price {
+			color: #333;
+			font-weight: bold;
+		}
+
+		.predicted-price {
+			color: #4CAF50;
+			font-weight: bold;
+		}
+
+		.plot {
+			margin: 50px auto;
+			max-width: 800px;
+		}
+	</style>
+</head>
+<body>
+	<h1>Ethereum (ETH) Price Prediction</h1>
+	<p>The recommended  is <span class="predicted-price">{{eth_recommendation}}</span>.</p>
+	<p>The Current Price: <span class="current-price">${{eth_current_price}}</span>.</p>
+	<p>The predicted price is <span class="predicted-price">${{eth_predicted_price}}</span>.</p>
+	<div class="plot">
+		{{ eth_plot|safe }}
+	</div>
+</body>
+</html>

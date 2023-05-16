@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Trade Page</title>
+    <style>
+      /* Set the background color and font family for the page */
+      body {
+        background-color: #f2f2f2;
+        font-family: Arial, sans-serif;
+      }
+
+      /* Center align all content */
+      .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+      }
+
+      /* Style the header section with a logo */
+      header {
+        background-color: #333;
+        color: white;
+        padding: 50px;
+      }
+
+      /* Style the select menu */
+      select {
+        font-size: 16px;
+        padding: 8px;
+        margin: 10px;
+        border: none;
+        border-radius: 5px;
+        background-color: #fff;
+        color: #333;
+      }
+
+      /* Style the hover effect for links */
+      ul li a:hover {
+        color: #fff;
+        background-color: #333;
+        border-radius: 5px;
+        padding: 5px;
+        text-decoration: none;
+      }
+
+      /* Center align the heading and paragraph */
+      h1, p {
+        text-align: center;
+      }
+
+      /* Style the prediction message */
+      #prediction-message {
+        text-align: center;
+        font-style: italic;
+        color: #777;
+      }
+    </style>
+    <script>
+      function showPredictionMessage() {
+        var messageElement = document.getElementById("prediction-message");
+        messageElement.innerHTML = "Please wait, the prediction will be ready in a few seconds...";
+      }
+    </script>
+  </head>
+  <body>
+    <!-- Center all content -->
+    <div class="container">
+      <!-- Add the header section with a logo -->
+      <header>
+        AI IN BLOCKCHAIN     </header>
+
+      <h1>Cryptocurrency Recommendation</h1>
+      <p>Select a Cryptocurrency</p>
+
+      <!-- Style the select menu -->
+      <select name="crypto" id="crypto" onchange="showPredictionMessage(); window.location.href=this.value;">
+        <option value="">Select a cryptocurrency:</option>
+        <option value="/lstm-btc-prediction">Bitcoin (BTC)</option>
+        <option value="/lstm-eth-prediction">Ethereum (ETH)</option>
+        <option value="/lstm-doge-prediction">Dogecoin (DOGE)</option>
+      </select>
+
+      <ul>
+        <!-- Style the hover effect for links -->
+        <li><a href="/prediction/BTC">Get Bollinger Bands prediction for BTC</a></li>
+        <li><a href="/prediction/ETH">Get Bollinger Bands prediction for ETH</a></li>
+      </ul>
+
+      <!-- Display the prediction message -->
+      <p id="prediction-message"></p>
+    </div>
+  </body>
+</html>
